@@ -39,7 +39,7 @@ During the development of CellTechHub, I had the opportunity to learn SCSS, whic
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/CellTechHub.git
+git clone https://github.com/Himanshusekharsahoo/CellTechHub.git
 ```
 
 2. Open `index.html` in your web browser to view the website locally.
