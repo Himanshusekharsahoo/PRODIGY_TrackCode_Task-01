@@ -1,0 +1,79 @@
+// Reset styles
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  // Header Styles
+  .site-header {
+    padding: 24px 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+  }
+  
+  .site-header-inner {
+    position: relative; /* To display all elements above the background color */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .header-links {
+    display: inline-flex;
+  
+    li {
+      display: inline-flex;
+    }
+  
+    a:not(.button) {
+      @include font-size(7, mobile, true, true, true); // Assuming these are mixins for font size
+  
+      @if (get-font-size(7, desktop) != get-font-size(7, mobile)) {
+        @media (>medium) {
+          @include font-size(7, desktop, true, true, true);
+        }
+      }
+  
+      @include font-weight(semibold);
+      @include anchor-aspect(header); // Assuming these are mixins for font style
+      line-height: 16px;
+      padding: 8px 24px;
+    }
+  }
+  
+  // Navigation Styles (from previous code)
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+  }
+  
+  nav a {
+    color: #333;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  nav a:hover {
+    color: #007bff; /* Change hover color here */
+  }
+  
+  .scrolled {
+    background-color: #f5f5f5; /* Scrolled background color here */
+  }
+  
